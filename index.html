@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>기성, 시온 결혼합니다.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="Gisung, Sion">
+	<link href="style.css" rel="stylesheet">
+	<link href="demo.css" rel="stylesheet">
+	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/20161201/css/Arita-dotum.css" rel="stylesheet">
+	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/master/css/PureunJeonnam.css" rel="stylesheet">
+</head>
+<body>
+<div class="block">
+	<div style="position:absolute;top:0;left:0;width:100%;height:50%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+	</div>
+	<div style="position:absolute;top:0;left:0;width:100%;height:50%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+	</div>
+	<div style="position:absolute;top:0;left:0;width:100%;height:50%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+	</div>
+	<div style="position:absolute;bottom:10%;right:10%;">
+		<h1 data-scroll="toggle(.scaleUpIn, .scaleUpOut)">기성, 시온<br>결혼합니다.</h1>
+		<h3 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">2018년 4월 14일 토요일 2시<br>판교 W 스퀘어 8F 채플홀</h3>
+	</div>
+	<svg viewBox="0 0 60 60">
+		<path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
+	</svg>
+</div>
+<div class="block">
+	<div id="boundaryForNavigation"></div>
+	<div id="navigation" style="position:absolute;top:0;left:0;width:100%;height:37px;line-height:37px;z-index:1000;background-color:#fff;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;text-align:center;">
+			드림 | 소개 | 오시는 길
+	</div>
+	<div data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="position:relative;margin:auto;top:0;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+	</div>
+	<div>
+		<h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" style="text-align:center">
+			단발머리를 찰랑거리며<br>
+			환하게 웃던<br>
+			21살 소녀를 기억합니다.<br><br>
+			봄꽃을 닮은<br>
+			기억 속 아름다운 미소를 간직할 수 있도록<br>
+			그녀 곁에서 행복을 주고 싶습니다.
+		</h2>
+
+		<h1 style="text-align:center">_</h1>
+
+		<h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="text-align:center">
+			4월의 신랑 &middot; 신부<br>
+			기성 &middot; 시온 드림
+		</h2>
+	</div>
+</div>
+<div class="block">
+	지도랑 교통
+	<div style="position:absolute;top:0;left:0;width:100%;height:50%;">
+		<img src="https://sion-gisung.github.io/wedding_invitation/images/location.png" style="width:100%;height:auto;">
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="ScrollTrigger.min.js"></script>
+<script>
+$(window).on('load', function() {
+	var $boundaryForNavigation = $('#boundaryForNavigation');
+	var $navigation = $('#navigation');
+
+	$(window).on('scroll', (function() {
+		if (window.pageYOffset > $boundaryForNavigation.offset().top) {
+			$navigation.css('position', 'fixed');
+		} else {
+			$navigation.css('position', 'absolute');
+		}
+	}).bind(this));
+});
+
+window.counter = function() {
+	// this refers to the html element with the data-scroll-showCallback tag
+	var span = this.querySelector('span');
+	var current = parseInt(span.textContent);
+
+	span.textContent = current + 1;
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+	  addHeight: true
+  });
+});
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,700" rel="stylesheet">
+</body>
+</html>
