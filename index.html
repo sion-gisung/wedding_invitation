@@ -7,87 +7,276 @@
 	<meta name="author" content="Gisung, Sion">
 	<link href="style.css" rel="stylesheet">
 	<link href="demo.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/20161201/css/Arita-dotum.css" rel="stylesheet">
 	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/master/css/PureunJeonnam.css" rel="stylesheet">
+	<style type="text/css">
+		.mainImage {position:absolute;top:0;left:0;width:100%;height:65%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+	</style>
 </head>
 <body>
-<div class="block">
-	<div style="position:absolute;top:0;left:0;width:100%;height:50%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
-	</div>
-	<div style="position:absolute;top:0;left:0;width:100%;height:50%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
-	</div>
-	<div style="position:absolute;top:0;left:0;width:100%;height:50%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
-	</div>
-	<div style="position:absolute;bottom:10%;right:10%;">
-		<h1 data-scroll="toggle(.scaleUpIn, .scaleUpOut)">기성, 시온<br>결혼합니다.</h1>
-		<h3 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">2018년 4월 14일 토요일 2시<br>판교 W 스퀘어 8F 채플홀</h3>
-	</div>
-	<svg viewBox="0 0 60 60">
-		<path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
-	</svg>
-</div>
-<div class="block">
-	<div id="boundaryForNavigation"></div>
-	<div id="navigation" style="position:absolute;top:0;left:0;width:100%;height:37px;line-height:37px;z-index:1000;background-color:#fff;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;text-align:center;">
-			드림 | 소개 | 오시는 길
-	</div>
-	<div data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="position:relative;margin:auto;top:0;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
-	</div>
-	<div>
-		<h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" style="text-align:center">
-			단발머리를 찰랑거리며<br>
-			환하게 웃던<br>
-			21살 소녀를 기억합니다.<br><br>
-			봄꽃을 닮은<br>
-			기억 속 아름다운 미소를 간직할 수 있도록<br>
-			그녀 곁에서 행복을 주고 싶습니다.
-		</h2>
+	<div class="block">
+		<div id="mainImage1" class="mainImage" style="background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg');display:none"></div>
+		<div id="mainImage2" class="mainImage" style="background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg');display:none"></div>
+		<div id="mainImage3" class="mainImage" style="background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg');display:none"></div>
 
-		<h1 style="text-align:center">_</h1>
-
-		<h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="text-align:center">
-			4월의 신랑 &middot; 신부<br>
-			기성 &middot; 시온 드림
-		</h2>
+		<div style="position:absolute;bottom:15%;right:5%;">
+			<h1 data-scroll="toggle(.scaleUpIn, .scaleUpOut)">기성&middot;시온<br>결혼합니다.</h1>
+			<h3 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" style="padding-left:2px;">2018 04.14 SAT,2PM</h3>
+		</div>
+		<svg viewBox="0 0 60 60">
+			<path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
+		</svg>
 	</div>
-</div>
-<div class="block">
-	지도랑 교통
-	<div style="position:absolute;top:0;left:0;width:100%;height:50%;">
-		<img src="https://sion-gisung.github.io/wedding_invitation/images/location.png" style="width:100%;height:auto;">
+	<div class="block">
+		<div id="boundaryForNavigation"></div>
+		<!--#a3546c, #1F2D3D -->
+	  <div id="navigation" style="position:absolute;top:0;left:0;width:100%;height:37px;line-height:37px;z-index:1000;background-color:#a3546c;text-align:center;">
+	 		<div style="display:table;width:100%;color:#fff">
+				<div style="display:table-row">
+					<div style="display:table-cell;width:25%">
+						홈
+					</div>
+					<div style="display:table-cell;width:25%">
+						소개
+					</div>
+					<div style="display:table-cell;width:25%">
+						문구
+					</div>
+					<div style="display:table-cell;width:25%">
+						오시는 길
+					</div>
+				</div>
+			</div>
+	  </div>
+		<div style="position:absolute;top:0;left:0;width:100%;height:30%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_alone2.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+		</div>
+		<div style="position:absolute;top:33%;left:0;">
+			<h2 style="text-align:center">
+				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					<span style="font-weight:bold">신랑</span> 서기성<br>
+					<span>_</span><br>
+					유년시절 부터 책 읽는 것을 좋아했으며,<br>
+					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
+					고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
+					주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.<br>
+				</p>
+				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라<br>
+					긍정적인 변화들을 경험하고 있습니다.<br>
+					운동도 즐겨하게 되었고,<br>
+					게임으로도 스트레스를 풀며,<br>
+					단순하게 사는 즐거움을 알게 되었습니다.<br>
+					무엇보다도 가장 큰 변화는 제가 가치있는 사람으로 느낄 수 있도록<br>
+					옆에서 항상 응원해 주는 점입니다.<br>
+				</p>
+				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					이제는 평생의 반려자로써 서로를 아끼고,<br>
+					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다 : )<br>
+					<span>_</span>
+				</p>
+			</h2>
+		</div>
 	</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="ScrollTrigger.min.js"></script>
-<script>
-$(window).on('load', function() {
-	var $boundaryForNavigation = $('#boundaryForNavigation');
-	var $navigation = $('#navigation');
+	<div class="block">
+		<div style="position:absolute;top:0;left:0;width:100%;height:30%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+		</div>
+		<div style="position:absolute;top:33%;left:0;">
+			<h2 style="text-align:center">
+				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					<span style="font-weight:bold">신부</span> 김시온<br>
+					<span>_</span><br>
+					유년시절 부터 책 읽는 것을 좋아했으며,<br>
+					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
+					고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
+					주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.<br>
+				</p>
+				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라<br>
+					긍정적인 변화들을 경험하고 있습니다.<br>
+					운동도 즐겨하게 되었고,<br>
+					게임으로도 스트레스를 풀며,<br>
+					단순하게 사는 즐거움을 알게 되었습니다.<br>
+					무엇보다도 가장 큰 변화는 제가 가치있는 사람으로 느낄 수 있도록<br>
+					옆에서 항상 응원해 주는 점입니다.<br>
+				</p>
+				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					이제는 평생의 반려자로써 서로를 아끼고,<br>
+					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다 : )<br>
+					<span>_</span>
+				</p>
+			</h2>
+		</div>
+	</div>
+	<div class="block">
+		<div data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="position:relative;margin:auto;top:0;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+		</div>
+		<div>
+			<h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" style="text-align:center">
+				단발머리를 찰랑거리며<br>
+				환하게 웃던<br>
+				21살 소녀를 기억합니다.<br><br>
+				봄꽃을 닮은<br>
+				기억 속 아름다운 미소를 간직할 수 있도록<br>
+				그녀 곁에서 행복을 주고 싶습니다.<br><br>
+				부부로서 첫 걸음을 내딛는 자리에<br>
+				함께해주셔서 축복해 주시길 바랍니다.<br>
+			</h2>
 
-	$(window).on('scroll', (function() {
-		if (window.pageYOffset > $boundaryForNavigation.offset().top) {
-			$navigation.css('position', 'fixed');
-		} else {
-			$navigation.css('position', 'absolute');
+			<h1 style="text-align:center">_</h1>
+
+			<h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="text-align:center">
+				4월의 신랑 &middot; 신부<br>
+				기성 &middot; 시온 드림
+			</h2>
+		</div>
+	</div>
+	<div class="block">
+		<div style="position:absolute;top:0;left:0;width:100%;height:auto;text-align:center">
+			<a data-scroll="toggle(.scaleDownIn, .scaleDownOut)" href="https://map.naver.com/?mapmode=0&lng=4958b2769ef5442aa9ba4ebd1f365754&pinId=36301790&pinType=site&lat=89f63b13c4af0b1ddb76c5eaa1dfffde&dlevel=11&enc=b64">네이버 지도로 보기</a>
+		</div>
+		<div style="position:absolute;top:5%;left:0;width:100%;height:auto;text-align:center">
+				<span style="background-color:#2F343B;padding:7px;color:#fff">판교 더블유 스퀘어 / 8F 채플</span>
+		</div>
+		<div style="position:absolute;top:7%;left:0;width:100%;height:50%;">
+			<img src="https://sion-gisung.github.io/wedding_invitation/images/location.png" style="width:80%;height:auto;margin:10%">
+			<div style="display:table;width:100%">
+				<div style="display:table-row">
+					<div style="display:table-cell">
+							<span style="color:red">지하철</span>
+					</div>
+					<div style="display:table-cell">
+							[신분당선 판교역] 1번 출구 도보 10분 소요
+					</div>
+				</div>
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							* 1번 출구 앞 셔틀버스 10분 간격 운행
+					</div>
+				</div>
+
+				<div style="display:table-row">
+					<div style="display:table-cell">
+							<span style="color:red">자가용</span>
+					</div>
+					<div style="display:table-cell">
+							[경부고속도로]
+					</div>
+				</div>
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							판교 IC 차출 후 좌회언 약 700m 직진하여 사거리에서 우회전(SK주유소 뒤)
+					</div>
+				</div>
+
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							[분당수서고속도로]
+					</div>
+				</div>
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							청담대교 -> 분당수서로 성담아트센터 옆길(삼평동방향 우회전)
+					</div>
+				</div>
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							* 주차장 300대 (무료주차 2시간)
+					</div>
+				</div>
+
+				<div style="display:table-row">
+					<div style="display:table-cell">
+							<span style="color:red">전세버스</span>
+					</div>
+					<div style="display:table-cell">
+							안중 경기물류고등학교 교문 앞
+					</div>
+				</div>
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							(11시 20분 출발) -> 평택 종합운동장 입구(12시 10분 출발)
+					</div>
+				</div>
+				<div style="display:table-row">
+					<div style="display:table-cell">
+					</div>
+					<div style="display:table-cell">
+							* 전세버스 타실 분들은 신부측에 연락 부탁드립니다 : )
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="height:100px;text-align:center;line-height:100px;">
+		Copyright ⓒsion,gisung. All Rights Reserved
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="ScrollTrigger.min.js"></script>
+	<script>
+	$(window).on('load', function() {
+		var $mainImage1 = $('#mainImage1');
+		var $mainImage2 = $('#mainImage2');
+		var $mainImage3 = $('#mainImage3');
+		var $boundaryForNavigation = $('#boundaryForNavigation');
+		var $navigation = $('#navigation');
+
+		var nFadeInOutTime = 1000;
+		var nKeepTime = 3000;
+		var oTimer = null;
+		function fadeInOut() {
+			if (oTimer) {
+				clearTimeout(oTimer);
+				oTimer = null;
+			}
+
+			$mainImage1.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
+				$mainImage2.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
+					$mainImage3.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
+						oTimer = setTimeout(fadeInOut, nFadeInOutTime);
+					});
+				});
+			});
 		}
-	}).bind(this));
-});
 
-window.counter = function() {
-	// this refers to the html element with the data-scroll-showCallback tag
-	var span = this.querySelector('span');
-	var current = parseInt(span.textContent);
+		fadeInOut();
 
-	span.textContent = current + 1;
-};
+		$(window).on('scroll', (function() {
+			if (window.pageYOffset > $boundaryForNavigation.offset().top) {
+				$navigation.css('position', 'fixed');
+			} else {
+				$navigation.css('position', 'absolute');
+			}
+		}).bind(this));
+	});
 
-document.addEventListener('DOMContentLoaded', function(){
-  var trigger = new ScrollTrigger({
-	  addHeight: true
-  });
-});
-</script>
+	window.counter = function() {
+		// this refers to the html element with the data-scroll-showCallback tag
+		var span = this.querySelector('span');
+		var current = parseInt(span.textContent);
 
-<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,700" rel="stylesheet">
+		span.textContent = current + 1;
+	};
+
+	document.addEventListener('DOMContentLoaded', function(){
+	  var trigger = new ScrollTrigger({
+		  addHeight: true
+	  });
+	});
+	</script>
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,700" rel="stylesheet">
 </body>
 </html>

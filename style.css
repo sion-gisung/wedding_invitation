@@ -11,17 +11,18 @@ body
 {
 	background: #fff;
 	color: #605a59;
+	font-family: 'Nanum Gothic', 'Sans-serif';
 
-	font-family: 'Arita-dotum', 'Sans-serif';
 	font-size: 22px;
 	line-height: 33px;
 }
 
 a
 {
-	color: #d7e7f3;
+	color: #605a59;
 	text-decoration: none;
 	font-weight: 500;
+	font-size:1em;
 
 	transition: color 0.25s ease;
 }
@@ -34,7 +35,7 @@ a:hover
 h1
 {
 	font-size: 2em;
-	font-weight: 500;
+	font-weight: 800;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	line-height: normal;
@@ -46,8 +47,9 @@ h1
 h2
 {
 	font-weight: 300;
-	font-size: 1.5em;
+	font-size: 1.1em;
 	line-height: 1.5em;
+	font-family: 'Arita-dotum', 'Sans-serif';
 
 	-webkit-font-smoothing: subpixel-antialiased;
 }
@@ -56,7 +58,7 @@ h3
 {
 	font-weight: 500;
 	font-size: 1em;
-	line-height: 1em;
+	line-height: 1.4em;
 	color: #ff8080;
 
 	-webkit-font-smoothing: subpixel-antialiased;
