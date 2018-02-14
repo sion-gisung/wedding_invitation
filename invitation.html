@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>기성, 시온 결혼합니다.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="Gisung, Sion">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/20161201/css/Arita-dotum.css" rel="stylesheet">
+	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/master/css/PureunJeonnam.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,700" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" media="screen" href="jquery-sakura.min.css" />
+	<style type="text/css">
+		* {margin:0;padding:0}
+		body {background-color:#fff;color:#605a59;font-family:'Nanum Gothic','Sans-serif'}
+		.title {font-size:1.5em;margin-bottom:20px;line-height:1.5em;font-weight:1.2}
+		.subTitle {padding-top:5px;padding-bottom:5px;font-size:0.7em;border:1px solid #ccc;color:#ccc;border-radius:4px;width:150px;line-height:1.4em;margin:auto;font-weight:1}
+		h3 {font-size:1em;text-align:center}
+		p {font-size:0.5em;text-align:center}
+		.card {width:100%}
+		.card.main {height:100vmax;padding-top:10%}
+		.card.introduce {height:110vmax}
+		.card.image {height:110vmax}
+		.card.message {height:100vmax}
+		.card.howToCome {height:200vmax}
+		.dividedCard {height:100vmax;float:left;width:50%}
+		.mainImage {margin-top:10%;width:100%;height:50%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+		.mainImage.first {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg')}
+		.mainImage.second {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.mainImage.third {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.mainTitle {text-align:center;padding-right:10px;padding-top:10px;}
+		.groomImage {width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_alone2.jpg')}
+		.groomDescription {margin-bottom:10%}
+		.brideImage {width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg')}
+		.brideDescription {margin-bottom:10%}
+		.gridImageArea {width:100%;height:100%}
+		.gridImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);float:left;width:48%;height:31%;margin:1%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+		.gridImage.first {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.gridImage.second {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.gridImage.third {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.gridImage.fourth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.gridImage.fifth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.gridImage.sixth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.introduceTitle {width:90%;margin-top:10%;margin-bottom:10px;font-size:1.5em;color:#605a59;line-height:1.7em;font-weight:1.2}
+		.introduceDecription {margin-bottom:3%;width:90%;font-size:0.8em;color:#7f7a7a;line-height:1.5em;font-weight:1.1}
+		.bold {text-weight:bold}
+		#navigation {width:100%;top:0;left:0;z-index:1000}
+		.table {display:table;width:100%;text-align:center;padding-top:10px;padding-bottom:10px;font-size:0.8em;color:#fff;line-height:1.4em;margin:auto;font-weight:0.5;background-color:#a3546c}
+		.tableRow {display:table-row}
+		.tableCell {display:table-cell;width:25%}
+		.downArrowArea {width:100%;height:20%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('Pure-CSS-Scroll-Animation-Arrow.gif')}
+		.flower {margin:auto;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover}
+		.contents {width:90%;margin:5%;font-size:1em;color:#7f7a7a;line-height:1.5em;font-weight:1.1}
+		.separator {margin:auto;width:10%;border:1px solid #ccc;opacity:0.8}
+		.map {text-align:center;margin:auto;font-size:1em;line-height:1.5em;font-weight:1.1;width:60%}
+		.howToComeTitle {margin-left:5%;text-align:left;color:#a3546c;font-size:1em;line-height:1em;font-weight:bold}
+		.howToComeDescription {margin:5%;text-align:left;color:#605a59;font-size:0.9em;line-height:1.5em}
+		/** 반응형웹 **/
+		@media screen and (max-width:480px) {
+			.card.introduce {height:200vmax}
+			.card.image {height:200vmax}
+			.card.howToCome {height:130vmax}
+			.dividedCard {height:100vmax;float:none;width:90%;padding:5%;}
+			.groomImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_alone2.jpg')}
+			.brideImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg')}
+			.gridImage {height:15%;float:none;width:90%;margin:5%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+		}
+		
+		/** 애니메이션 **/
+		.fromTopIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromTopOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,-10px);opacity: 0.0;}
+		.fromBottomIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromBottomOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,10px);opacity: 0.0;}
+		.fromLeftIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromLeftOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(-10px,0);opacity: 0.0;}
+		.fromRightIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromRightOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(10px, 0);opacity: 0.0;}
+		.scaleUpIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(1.0,1.0);opacity: 1.0;}
+		.scaleUpOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(1.3,1.3);opacity: 0.0;}
+		.scaleDownIn{transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(1.0,1.0);opacity: 1.0;}
+		.scaleDownOut{transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(0.7,0.7);opacity: 0.0;}
+	</style>
+</head>
+<body>
+	<div class="card main">
+		<div class="mainTitle">
+			<h1 class="title">기 성 &middot; 시 온<br>결 혼 합 니 다.</h1>
+			
+			<!-- TODO 여기 애니메이션을 주면 좋을듯 -->
+			<h2 class="subTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">2018 04.14 SAT,2PM</h3>
+		</div>
+		<div class="mainImage first" style="display:none">
+		</div>
+		<div class="mainImage second" style="display:none">
+		</div>
+		<div class="mainImage third" style="display:none">
+		</div>
+		<div class="downArrowArea">
+		</div>
+	</div>
+	<div class="card introduce">
+		<div id="navigation">
+			<div class="table">
+				<div class="tableRow">
+					<div class="tableCell">
+						홈
+					</div>
+					<div class="tableCell">
+						신랑, 신부 소개
+					</div>
+					<div class="tableCell">
+						드리는 말
+					</div>
+					<div class="tableCell">
+						오시는 길
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="boundaryForNavigation"></div>
+		<div class="dividedCard">
+			<div class="groomImage">
+			</div>
+			<div class="groomDescription">
+				<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신랑 서기성</p>
+				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					유년시절 부터 책 읽는 것을 좋아했으며,<br>
+					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
+					고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
+					주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.
+				</p>
+				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라
+					긍정적인 변화들을 경험하고 있습니다.<br>
+					운동도 즐겨하게 되었고,
+					게임으로도 스트레스를 풀며,
+					단순하게 사는 즐거움을 알게 되었습니다.<br>
+					무엇보다도 가장 큰 변화는 제가 가치있는 사람으로<br>
+					느낄 수 있도록 옆에서 항상 응원해 주는 점입니다.
+				</p>
+				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					이제는 평생의 반려자로써 서로를 아끼고,
+					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다.
+				</p>
+			</div>
+			<div class="separator">
+			</div>
+		</div>
+		<div class="dividedCard">
+			<div class="brideImage">
+			</div>
+			<div class="brideDescription">
+				<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신부 김시온</p>
+				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					유년시절 부터 책 읽는 것을 좋아했으며,<br>
+					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
+					고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
+					주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.
+				</p>
+				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라
+					긍정적인 변화들을 경험하고 있습니다.<br>
+					운동도 즐겨하게 되었고,
+					게임으로도 스트레스를 풀며,
+					단순하게 사는 즐거움을 알게 되었습니다.<br>
+					무엇보다도 가장 큰 변화는 제가 가치있는 사람으로<br>
+					느낄 수 있도록 옆에서 항상 응원해 주는 점입니다.
+				</p>
+				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+					이제는 평생의 반려자로써 서로를 아끼고,
+					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다.
+				</p>
+			</div>
+			<div class="separator">
+			</div>
+		</div>
+	</div>
+	<div class="card image">
+		<div class="gridImageArea">
+			<div class="gridImage first">
+			</div>
+			<div class="gridImage second">
+			</div>
+			<div class="gridImage third">
+			</div>
+			<div class="gridImage fourth">
+			</div>
+			<div class="gridImage fifth">
+			</div>
+			<div class="gridImage sixth">
+			</div>
+		</div>
+	</div>
+	<div class="card message">
+		<div class="flower" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
+		</div>
+		<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			단발머리를 찰랑거리며 환하게 웃던<br>
+			21살 소녀를 기억합니다.
+		</p>
+		<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			봄꽃을 닮은 기억 속 아름다운 그 미소가<br>
+			그녀의 입가에서 언제나 머무르도록
+		</p>
+		<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			나무와 같은 변함없는 모습으로<br>
+			그녀 곁에서 행복을 주고 싶습니다.
+		</p>
+		<p class="contents" style="padding-bottom:10%;" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			하나님이 기뻐하시는 삶을 위해<br>
+			저희가 부부로서 첫 발걸음을 내딛는 자리에<br>
+			함께해 주셔서 축복해주시길 소망합니다.
+		</p>
+		<div class="separator">
+		</div>
+		<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			4월의 신랑 &middot; 신부<br>
+			기성 &middot; 시온 드림
+		</p>
+	</div>
+	<div class="card howToCome">
+		<div style="color:#fff;background-color:#2F343B;padding:7px;width:60%;margin:auto;text-align:center;margin-bottom:5px;">
+			판교 더블유 스퀘어 / 8F 채플
+		</div>
+		<div class="map">
+			<a style="text-decoration:none;color:#605a59;" data-scroll="toggle(.scaleDownIn, .scaleDownOut)" href="https://map.naver.com/?mapmode=0&lng=4958b2769ef5442aa9ba4ebd1f365754&pinId=36301790&pinType=site&lat=89f63b13c4af0b1ddb76c5eaa1dfffde&dlevel=11&enc=b64">네이버 지도로 보기</a>
+		</div>
+		<img src="https://sion-gisung.github.io/wedding_invitation/images/location.png" style="width:90%;height:auto;margin:5%">
+		<p class="howToComeTitle">
+			자가용 (경부고속도로)
+		</p>
+		<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			&middot; 판교 IC 차출 후 좌회언 약 700m 직진하여 사거리에서<br>
+			&nbsp; 우회전 (SK주유소 뒤)
+		</p>
+		
+		<p class="howToComeTitle">
+			자가용 (분당수서고속도로)
+		</p>
+		<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			&middot; 청담대교 -> 분당수서로 성담아트센터 옆길<br>
+			&nbsp; (삼평동방향 우회전)
+		</p>
+		
+		<p class="howToComeTitle">
+			지하철
+		</p>
+		<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			&middot; [신분당선 판교역] 1번 출구 도보 10분 소요<br>
+			&middot; 1번 출구 앞 셔틀버스 10분 간격 운행
+		</p>
+		
+		<p class="howToComeTitle">
+			전세버스
+		</p>
+		<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+			&middot; 안중 경기물류고등학교 교문 앞 (11시 20분 출발)<br>
+			&middot; 평택 종합운동장 입구(12시 10분 출발)<br>
+			&nbsp; 전세버스를 타실 분들은 신부 측에 연락 부탁드립니다.
+		</p>
+	</div>
+	<div style="height:100px;text-align:center;line-height:100px;color:#605a59;font-size:1em">
+		Copyright ⓒsion,gisung. All Rights Reserved
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="ScrollTrigger.min.js"></script>
+	<script src="jquery-sakura.min.js"></script>
+	<script>
+	$(window).on('load', function() {
+		var $boundaryForNavigation = $('#boundaryForNavigation');
+		var $navigation = $('#navigation');
+		var $body = $('body');
+		var $mainImage1 = $('div.mainImage.first');
+		var $mainImage2 = $('div.mainImage.second');
+		var $mainImage3 = $('div.mainImage.third');
+		
+		$body.sakura();
+		
+		var nFadeInOutTime = 1000;
+		var nKeepTime = 3000;
+		var oTimer = null;
+		function fadeInOut() {
+			if (oTimer) {
+				clearTimeout(oTimer);
+				oTimer = null;
+			}
+
+			$mainImage1.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
+				$mainImage2.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
+					$mainImage3.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
+						oTimer = setTimeout(fadeInOut, nFadeInOutTime);
+					});
+				});
+			});
+		}
+		
+		fadeInOut();
+
+		$(window).on('scroll', (function() {
+			if (window.pageYOffset > $boundaryForNavigation.offset().top) {
+				$navigation.css('position', 'fixed');
+				$body.css('margin-top', $navigation.height());
+			} else {
+				$navigation.css('position', 'relative');
+				$body.css('margin-top', 0);
+			}
+		}).bind(this));
+		
+		var oTrigger = new ScrollTrigger({
+			  addHeight: true
+		});
+	});
+	</script>
+</body>
+</html>
