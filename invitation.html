@@ -17,14 +17,14 @@
 		.subTitle {padding-top:5%;padding-bottom:5%;font-size:0.7em;color:#605a59;width:100%;line-height:2em;margin:auto;font-weight:normal}
 		h3 {font-size:1em;text-align:center}
 		p {font-size:0.5em;text-align:center}
-		.card {width:100%}
+		.card {width:100%;background-color:#fff}
 		.card.main {height:100vmax}
 		.card.introduce {height:110vmax}
 		.card.image {height:120vmax}
 		.card.message {height:110vmax}
 		.card.howToCome {height:210vmax}
 		.dividedCard {height:100vmax;float:left;width:50%}
-		.mainImage {margin-top:10%;width:100%;height:50%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+		.mainImage {margin-top:10%;width:100%;height:40%;background-repeat:no-repeat;background-position:center center;background-size:cover}
 		.mainImage.first {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg')}
 		.mainImage.second {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
 		.mainImage.third {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
@@ -41,7 +41,7 @@
 		.gridImage.fourth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
 		.gridImage.fifth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
 		.gridImage.sixth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
-		.introduceTitle {width:90%;margin:5%;font-size:1.5em;color:#605a59;line-height:1.7em;font-weight:normal}
+		.introduceTitle {width:90%;margin:5%;font-size:1.3em;color:#605a59;line-height:1.7em;font-weight:normal}
 		.introduceDecription {margin:5%;width:90%;font-size:0.7em;color:#7f7a7a;line-height:1.8em;font-weight:normal;text-align:center}
 		.bold {text-weight:bold}
 		#navigation {position:fixed;width:100%;top:0;left:0;z-index:1000;height:10%}
@@ -50,8 +50,9 @@
 		.tableCell {display:table-cell;width:25%}
 		.downArrowArea {width:100%;height:12%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('Pure-CSS-Scroll-Animation-Arrow.gif')}
 		.flower {margin:auto;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover}
-		.contents {width:90%;margin:5%;font-size:0.8em;color:#7f7a7a;line-height:1.7em;font-weight:normal}
+		.contents {width:90%;margin:5%;font-size:0.7em;color:#7f7a7a;line-height:1.7em;font-weight:normal}
 		.separator {margin:auto;width:70%;border:1px solid #c2c2c2;opacity:0.8}
+		.separator2 {margin:auto;width:30%;border:1px solid #c2c2c2;opacity:0.8}
 		.map {text-align:center;margin:auto;font-size:1em;line-height:1.5em;font-weight:1.1;width:60%}
 		.howToComeTitle {margin-left:10%;padding:2%;text-align:left;color:#a3546c;font-size:0.8em;line-height:1em;font-weight:bold}
 		.howToComeDescription {margin-left:10%;padding:2%;text-align:left;color:#605a59;font-size:0.6em;line-height:1.7em}
@@ -59,8 +60,8 @@
 		@media screen and (max-width:480px) {
 			.card.introduce {height:210vmax}
 			.card.image {height:200vmax}
-			.card.message {height:100vmax;padding-top:10%}
-			.card.howToCome {height:130vmax}
+			.card.message {height:100vmax}
+			.card.howToCome {height:140vmax}
 			.dividedCard {height:100vmax;float:none;width:90%;padding:5%;}
 			.groomImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_alone2.jpg')}
 			.brideImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg')}
@@ -126,12 +127,17 @@
 		<div class="downArrowArea">
 		</div>
 	</div>
+	<div id="introduceTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:0.8em;background-color:#fff">
+		신 랑 &middot; 신 부 &nbsp;&nbsp;소 개
+		<div class="separator2">
+		</div>
+	</div>
 	<div class="card introduce">
 		<div class="dividedCard">
 			<div class="groomImage">
 			</div>
 			<div class="groomDescription">
-				<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신랑 서기성</p>
+				<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신 랑 &nbsp;&nbsp;서 기 성</p>
 				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
 					유년시절 부터 책 읽는 것을 좋아했으며,<br>
 					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
@@ -151,15 +157,13 @@
 					이제는 평생의 반려자로써 서로를 아끼고,
 					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다.
 				</p>
-			</div>
-			<div class="separator">
 			</div>
 		</div>
 		<div class="dividedCard">
 			<div class="brideImage">
 			</div>
 			<div class="brideDescription">
-				<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신부 김시온</p>
+				<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신 부 &nbsp;&nbsp;김 시 온</p>
 				<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
 					유년시절 부터 책 읽는 것을 좋아했으며,<br>
 					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
@@ -180,12 +184,15 @@
 					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다.
 				</p>
 			</div>
-			<div class="separator">
-			</div>
 		</div>
 	</div>
-	<div id="imageButton" style="height:300px;text-align:center;line-height:100px;color:#fff;font-size:0.7em;background-color:#605a59">
-		갤러리 보기
+	<div id="imageTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:0.8em;background-color:#fff">
+		갤 러 리 &nbsp;&nbsp;보 기
+		<div class="separator2">
+		</div>
+	</div>
+	<div id="imageButton" style="height:80px;text-align:center;line-height:80px;color:#605a59;font-size:0.7em;background-color:#fff">
+		펼치기
 	</div>
 	<div class="card image" style="display:none">
 		<div class="gridImageArea">
@@ -201,6 +208,11 @@
 			</div>
 			<div class="gridImage sixth">
 			</div>
+		</div>
+	</div>
+	<div id="messageTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:0.8em;background-color:#fff">
+		드 리 는 &nbsp;&nbsp;말
+		<div class="separator2">
 		</div>
 	</div>
 	<div class="card message">
@@ -232,11 +244,13 @@
 			기성 &middot; 시온 드림
 		</p>
 	</div>
-	<div class="card howToCome">
-		<div style="color:#605a59;padding-bottom:10%;width:100%;margin:auto;text-align:center">
-			오시는 길
+	<div id="howToComeTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:0.8em;background-color:#fff">
+		오 시 는 &nbsp;&nbsp;길
+		<div class="separator2">
 		</div>
-		<div style="color:#fff;background-color:#2F343B;padding:7px;width:60%;margin:auto;text-align:center;margin-bottom:5px;">
+	</div>
+	<div class="card howToCome">
+		<div style="color:#fff;background-color:#605a59;padding:7px;width:60%;margin:auto;text-align:center;margin-bottom:5px;">
 			판교 더블유 스퀘어 / 8F 채플
 		</div>
 		<div class="map">
@@ -276,7 +290,7 @@
 			&nbsp; 전세버스를 타실 분들은 신부 측에 연락 부탁드립니다.
 		</p>
 	</div>
-	<div style="height:100px;text-align:center;line-height:100px;color:#fff;font-size:0.7em;background-color:#605a59">
+	<div style="height:100px;text-align:center;line-height:100px;color:#fff;font-size:0.7em;background-color:#605a59;z-index:1000">
 		Copyright ⓒsion,gisung. All Rights Reserved
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
