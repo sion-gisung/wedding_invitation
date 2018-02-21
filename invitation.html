@@ -92,7 +92,7 @@
 		<div id="navigation">
 			<div class="table">
 				<div class="tableRow">
-					<div class="tableCell">
+					<div class="tableCell" id="introduce">
 						소개
 					</div>
 					<div class="tableCell">
@@ -313,11 +313,22 @@
 		var $body = $('body');
 		var $imageButton = $('div._imageButton');
 		var $imageCard = $('div.image');
+		var $introduce = $('#introduce');
+
+		function moveScroll(moveInfo) {
+			$('html, body').animate( { scrollTop : moveInfo }, 1000 );
+		}
 
 		$imageButton.on('click', function () {
 			$imageCard.toggle();
 			$imageButton.toggle();
 		});
+
+		$introduce.on('click', function() {
+			var moveInfo = $('#introduceTitleArea').offset().top;
+			moveScroll(moveInfo);
+		});
+
 		/*
 		var $mainImage1 = $('div.mainImage.first');
 		var $mainImage2 = $('div.mainImage.second');
