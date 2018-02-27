@@ -16,7 +16,7 @@
 		p {font-size:0.5em;text-align:center}
 		.card {width:100%;background-color:#fff}
 		.card.main {height:110vmax}
-		.card.introduce {height:110vmax}
+		.card.introduce {height:130vmax}
 		.card.image {height:120vmax}
 		.card.message {height:110vmax}
 		.card.howToCome {height:210vmax}
@@ -41,7 +41,7 @@
 		.gridImage.sixth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
 		.introduceTitle {width:90%;margin:5%;font-size:1em;color:#605a59;line-height:1.7em;font-weight:normal}
 		.menuTitle {width:90%;margin:5%;font-size:1.2em;color:#000;line-height:1.7em;font-weight:normal}
-		.introduceDecription {margin:5%;width:90%;font-size:0.7em;color:#7f7a7a;line-height:1.8em;font-weight:normal;text-align:center}
+		.introduceDecription {margin:5%;width:90%;font-size:0.8em;color:#7f7a7a;line-height:1.8em;font-weight:normal;text-align:center}
 		.bold {text-weight:bold}
 		#navigation {position:fixed;width:100%;top:0;left:0;z-index:1000;height:38px}
 		.table {box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.1);display:table;width:100%;text-align:center;padding-top:10px;padding-bottom:10px;font-size:0.8em;color:#7f7a7a;line-height:1.4em;margin:auto;font-weight:0.5;background-color:#fff}
@@ -49,25 +49,25 @@
 		.tableCell {display:table-cell;width:25%}
 		.downArrowArea {width:100%;height:12%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('Pure-CSS-Scroll-Animation-Arrow.gif')}
 		.flower {margin:auto;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover}
-		.contents {width:90%;margin:5%;font-size:0.7em;color:#7f7a7a;line-height:1.7em;font-weight:normal}
+		.contents {width:90%;margin:5%;font-size:0.8em;color:#7f7a7a;line-height:1.7em;font-weight:normal}
 		.separator {margin:auto;width:70%;border:1px solid #c2c2c2;opacity:0.8}
 		.separator2 {margin:auto;width:40%;border:1px solid #c2c2c2;opacity:0.8}
 		.map {text-align:center;margin:auto;font-size:1em;line-height:1.5em;font-weight:1.1;width:60%}
-		.howToComeTitle {margin-left:10%;padding:2%;text-align:left;color:#a3546c;font-size:0.8em;line-height:1em;font-weight:bold}
-		.howToComeDescription {margin-left:10%;padding:2%;text-align:left;color:#605a59;font-size:0.6em;line-height:1.7em}
+		.howToComeTitle {margin-left:7%;padding:2%;text-align:left;color:#a3546c;font-size:0.9em;line-height:1em;font-weight:bold}
+		.howToComeDescription {margin-left:10%;padding:2%;text-align:left;color:#605a59;font-size:0.8em;line-height:1.7em}
 		.closeimage{height:80px;text-align:center;line-height:80px;color:#605a59;font-size:0.7em;background-color:#fff}
-		.toogleImage{width:35%;height:500px;}
+		.toogleImage {width:80%}
 		/** 반응형웹 **/
 		@media screen and (max-width:480px) {
-			.card.introduce {height:210vmax}
+			.card.introduce {height:270vmax}
 			.card.image {height:100%}/*200vmax*/
-			.card.message {height:80vmax}
+			.card.message {height:90vmax}
 			.card.howToCome {height:130vmax}
-			.dividedCard {height:100vmax;float:none;width:90%;padding:5%;}
+			.dividedCard {height:130vmax;float:none;width:90%;padding:5%;}
 			.groomImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_alone2.jpg')}
 			.brideImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg')}
 			.gridImage {height:100%;float:none;width:90%;margin:5%;background-repeat:no-repeat;background-position:center center;background-size:cover}
-			.toogleImage {width:80%;height:300px;}
+			.toogleImage {width:80%}
 		}
 		
 		/** 애니메이션 **/
@@ -318,7 +318,7 @@
 		</div>
 		
 		<!-- 타임라인 -->
-		<div class="_imageButton" style="text-align:center;">
+		<div class="_imageButton" style="text-align:center;margin-bottom:15%">
 			<img src="https://sion-gisung.github.io/wedding_invitation/images/white_grid.jpg" class="toogleImage">
 		</div>
 		
@@ -442,7 +442,7 @@
 		var oVague = $elContent.Vague({
 			intensity : 0,
 			animationOptions : {
-				duration: 1000,
+				duration: 500,
 				easing: 'linear'
 			}
 		});
