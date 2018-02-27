@@ -440,11 +440,7 @@
 		
 		// blur 모듈
 		var oVague = $elContent.Vague({
-			intensity : 0,
-			animationOptions : {
-				duration: 500,
-				easing: 'linear'
-			}
+			intensity : 30
 		});
 		
 		// 스크롤 이동 함수
@@ -458,14 +454,14 @@
 		function showMenu() {
 			$elNavigation.addClass('active');
 			$elMenu.show();
-			oVague.animate(30);
+			oVague.blur();
 		}
 		
 		// 메뉴 숨김 함수
 		function hideMenu() {
 			$elNavigation.removeClass('active');
 			$elMenu.hide();
-			oVague.animate(0);
+			oVague.toggleblur();
 		}
 		
 		$elIntroduce.on('click', function() {
