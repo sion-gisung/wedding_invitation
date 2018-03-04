@@ -498,11 +498,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./jquery.eeyellow.Timeline.js"></script>
 <script type="text/javascript">
-	$(window).on('load', function() {
+	function initTimeline() {
 		$('.VivaTimeline').vivaTimeline({
             carousel: true,
             carouselTime: 3000
         });
+	}
+	
+	$( document ).ready(function() {
+		initTimeline();
+	});
+	
+	$(window).on('load', function() {
+		initTimeline();
 	});
 </script>
 <script type="text/javascript">
