@@ -59,23 +59,6 @@
                         .siblings()
                         .hide();  
                 });              
-                             
-            self.target
-                .find('img').on('load', function(){
-                    self.target
-                        .find('.events-body')
-                        .each(function(){
-                            var maxHeight = 0;
-                            $(this)
-                                .find('.row')
-                                .each(function(){                                    
-                                    if($(this).height() > maxHeight){
-                                        maxHeight = $(this).height();
-                                    }
-                                });                                                        
-                            $(this).find('.row').height(maxHeight);
-                        });                                
-                }); 
         },
 
         //綁定事件

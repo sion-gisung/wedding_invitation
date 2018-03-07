@@ -5,288 +5,525 @@
 	<title>기성, 시온 결혼합니다.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="author" content="Gisung, Sion">
-	<link href="style.css" rel="stylesheet">
-	<link href="demo.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/20161201/css/Arita-dotum.css" rel="stylesheet">
-	<link href="http://cdn.rawgit.com/young-ha/webfont-archive/master/css/PureunJeonnam.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" media="screen" href="jquery-sakura.min.css" />
 	<style type="text/css">
-		.mainImage {position:absolute;top:0;left:0;width:100%;height:65%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+		* {margin:0;padding:0}
+		body {background-color:#fff;color:#605a59;font-family:'Nanum Gothic','Sans-serif'}
+		.title {font-size:1.5em;margin-bottom:10%;line-height:1.5em;font-weight:normal;margin-top:10%;}
+		.subTitle {padding-top:5%;padding-bottom:5%;font-size:0.7em;color:#605a59;width:100%;line-height:2em;margin:auto;font-weight:normal}
+		h3 {font-size:1em;text-align:center}
+		p {font-size:0.5em;text-align:center}
+		.card {width:100%;background-color:#fff}
+		.card.main {height:110vmax}
+		.card.introduce {height:130vmax}
+		.card.image {height:120vmax}
+		.card.message {height:110vmax}
+		.card.howToCome {height:210vmax}
+		.dividedCard {height:100vmax;float:left;width:50%}
+		.mainImage {width:100%;height:50%;background-repeat:no-repeat;background-position:50% 20%;background-size:cover}
+		.mainImage.first {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg')}
+		.mainImage.second {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/min/1-min.jpg')}
+		.mainImage.third {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.grid {width:100%;height:700px;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/white_grid.jpg')}
+		.mainTitle {text-align:center;padding-right:10px;padding-top:10px;}
+		.groomImage {width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_origin.jpg')}
+		.groomDescription {margin-bottom:10%}
+		.brideImage {width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg')}
+		.brideDescription {margin-bottom:10%}
+		.gridImageArea {width:100%;height:100%}
+		.gridImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);float:left;width:48%;height:31%;margin:1%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+		.gridImage.first {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.gridImage.second {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/min/1-min.jpg')}
+		.gridImage.third {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.gridImage.fourth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.gridImage.fifth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg')}
+		.gridImage.sixth {background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg')}
+		.introduceTitle {width:90%;margin:5%;font-size:1em;color:#605a59;line-height:1.7em;font-weight:normal}
+		.menuTitle {text-shadow:0 1px 0 #AFACAC;width:90%;margin:5%;font-size:1.2em;color:#000;line-height:1.7em;font-weight:normal}
+		.introduceDecription {margin:5%;width:90%;font-size:0.8em;color:#7f7a7a;line-height:1.8em;font-weight:normal;text-align:center}
+		.bold {text-weight:bold}
+		#navigation {position:fixed;width:100%;top:0;left:0;z-index:1000;height:38px}
+		.table {box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.1);display:table;width:100%;text-align:center;padding-top:10px;padding-bottom:10px;font-size:0.8em;color:#7f7a7a;line-height:1.4em;margin:auto;font-weight:0.5;background-color:#fff}
+		.tableRow {display:table-row}
+		.tableCell {display:table-cell;width:25%}
+		.downArrowArea {width:100%;height:12%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('Pure-CSS-Scroll-Animation-Arrow.gif')}
+		.flower {margin:auto;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover}
+		.contents {width:90%;margin:5%;font-size:0.8em;color:#7f7a7a;line-height:1.7em;font-weight:normal}
+		.separator {margin:auto;width:70%;border:1px solid #c2c2c2;opacity:0.8}
+		.separator2 {margin:auto;width:40%;border:1px solid #c2c2c2;opacity:0.8}
+		.map {text-align:center;margin:auto;font-size:1em;line-height:1.5em;font-weight:1.1;width:90%}
+		.howToComeTitle {margin-left:5%;margin-right:5%;padding:2%;text-align:left;color:#605a59;font-size:0.8em;line-height:1em;font-weight:bold}
+		.howToComeDescription {margin-left:5%;margin-right:5%;padding:2%;text-align:left;color:#605a59;font-size:0.7em;line-height:1.7em}
+		.closeimage{height:80px;text-align:center;line-height:80px;color:#605a59;font-size:0.7em;background-color:#fff}
+		.toogleImage {width:80%}
+		/** 반응형웹 **/
+		@media screen and (max-width:480px) {
+			.card.introduce {height:270vmax}
+			.card.image {height:100%}/*200vmax*/
+			.card.message {height:90vmax}
+			.card.howToCome {height:140vmax}
+			.dividedCard {height:130vmax;float:none;width:90%;padding:5%;}
+			.groomImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/min/2-min.jpg')}
+			.brideImage {box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);width:100%;height:30%;background-repeat:no-repeat;background-position:center center;background-size:cover;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/min/3-min.jpg')}
+			.gridImage {height:100%;float:none;width:90%;margin:5%;background-repeat:no-repeat;background-position:center center;background-size:cover}
+			.toogleImage {width:80%}
+		}
+		
+		/** 애니메이션 **/
+		.fromTopIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromTopOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,-10px);opacity: 0.0;}
+		.fromBottomIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromBottomOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,10px);opacity: 0.0;}
+		.fromLeftIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromLeftOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(-10px,0);opacity: 0.0;}
+		.fromRightIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(0,0);opacity: 1.0;}
+		.fromRightOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: translate(10px, 0);opacity: 0.0;}
+		.scaleUpIn {transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(1.0,1.0);opacity: 1.0;}
+		.scaleUpOut {transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(1.3,1.3);opacity: 0.0;}
+		.scaleDownIn{transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(1.0,1.0);opacity: 1.0;}
+		.scaleDownOut{transition: transform 1.0s ease, opacity 1.0s ease;transform: scale(0.7,0.7);opacity: 0.0;}
+		
+		/** 슬라이드 메뉴 **/
+		.navTrigger {cursor: pointer;width: 20px;height: 20px;margin: auto;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+		.navTrigger i {background-color: #fff;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2px;content: '';display: block;width: 100%;height: 2px;}
+		.navTrigger i:nth-child(1) {-webkit-animation: outT 0.8s backwards;animation: outT 0.8s backwards;-webkit-animation-direction: reverse;animation-direction: reverse;}
+		.navTrigger i:nth-child(2) {margin: 7px 0;-webkit-animation: outM 0.8s backwards;animation: outM 0.8s backwards;-webkit-animation-direction: reverse;animation-direction: reverse;}
+		.navTrigger i:nth-child(3) {-webkit-animation: outBtm 0.8s backwards;animation: outBtm 0.8s backwards;-webkit-animation-direction: reverse;animation-direction: reverse;}
+		.navTrigger.active i:nth-child(1) {-webkit-animation: inT 0.8s forwards;animation: inT 0.8s forwards;}
+		.navTrigger.active i:nth-child(2) {-webkit-animation: inM 0.8s forwards;animation: inM 0.8s forwards;}
+		.navTrigger.active i:nth-child(3) {-webkit-animation: inBtm 0.8s forwards;animation: inBtm 0.8s forwards;}
+
+		@-webkit-keyframes inM {
+		  50% {
+			-webkit-transform: rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: rotate(45deg);
+		  }
+		}
+		@keyframes inM {
+		  50% {
+			transform: rotate(0deg);
+		  }
+		  100% {
+			transform: rotate(45deg);
+		  }
+		}
+		@-webkit-keyframes outM {
+		  50% {
+			-webkit-transform: rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: rotate(45deg);
+		  }
+		}
+		@keyframes outM {
+		  50% {
+			transform: rotate(0deg);
+		  }
+		  100% {
+			transform: rotate(45deg);
+		  }
+		}
+		@-webkit-keyframes inT {
+		  0% {
+			-webkit-transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			-webkit-transform: translateY(9px) rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: translateY(9px) rotate(135deg);
+		  }
+		}
+		@keyframes inT {
+		  0% {
+			transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			transform: translateY(9px) rotate(0deg);
+		  }
+		  100% {
+			transform: translateY(9px) rotate(135deg);
+		  }
+		}
+		@-webkit-keyframes outT {
+		  0% {
+			-webkit-transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			-webkit-transform: translateY(9px) rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: translateY(9px) rotate(135deg);
+		  }
+		}
+		@keyframes outT {
+		  0% {
+			transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			transform: translateY(9px) rotate(0deg);
+		  }
+		  100% {
+			transform: translateY(9px) rotate(135deg);
+		  }
+		}
+		@-webkit-keyframes inBtm {
+		  0% {
+			-webkit-transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			-webkit-transform: translateY(-9px) rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: translateY(-9px) rotate(135deg);
+		  }
+		}
+		@keyframes inBtm {
+		  0% {
+			transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			transform: translateY(-9px) rotate(0deg);
+		  }
+		  100% {
+			transform: translateY(-9px) rotate(135deg);
+		  }
+		}
+		@-webkit-keyframes outBtm {
+		  0% {
+			-webkit-transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			-webkit-transform: translateY(-9px) rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: translateY(-9px) rotate(135deg);
+		  }
+		}
+		@keyframes outBtm {
+		  0% {
+			transform: translateY(0px) rotate(0deg);
+		  }
+		  50% {
+			transform: translateY(-9px) rotate(0deg);
+		  }
+		  100% {
+			transform: translateY(-9px) rotate(135deg);
+		  }
+		}
+		
+		/** 버튼 **/
+		a {
+			-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			display: block;
+			margin: 20px auto;
+			max-width: 180px;
+			text-decoration: none;
+			border-radius: 4px;
+			padding: 7px 30px;
+		}
+
+		a.button {
+			color: rgba(96,90,89, 0.8);
+			box-shadow: rgba(96,90,89, 0.4) 0 0px 0px 1px inset;
+			font-size:0.8em;
+		}
+
+		a.button:hover {
+			color: #fff;
+			box-shadow: rgba(96,90,89, 0.4) 0 0px 0px 40px inset;
+			font-size:0.8em;
+		}
 	</style>
 </head>
 <body>
-	<div class="block">
-		<div id="mainImage1" class="mainImage" style="background-image:url('https://sion-gisung.github.io/wedding_invitation/images/1.jpg');display:none"></div>
-		<div id="mainImage2" class="mainImage" style="background-image:url('https://sion-gisung.github.io/wedding_invitation/images/2.jpg');display:none"></div>
-		<div id="mainImage3" class="mainImage" style="background-image:url('https://sion-gisung.github.io/wedding_invitation/images/3.jpg');display:none"></div>
-
-		<div style="position:absolute;bottom:15%;right:5%;">
-			<h1 data-scroll="toggle(.scaleUpIn, .scaleUpOut)">기성&middot;시온<br>결혼합니다.</h1>
-			<h3 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" style="padding-left:2px;">2018 04.14 SAT,2PM</h3>
+	<!-- 상단 네비게이션 버튼 -->
+	<div style="position:fixed;top:5px;left:5px;width:30px;height:30px;z-index:10000">
+		<div class="navTrigger">
+			<i></i><i></i><i></i>
 		</div>
-		<svg viewBox="0 0 60 60">
-			<path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
-		</svg>
 	</div>
-	<div class="block">
-		<div id="boundaryForNavigation"></div>
-	  <div id="navigation" style="position:absolute;top:0;left:0;width:100%;height:37px;line-height:37px;z-index:1000;background-color:#a3546c;text-align:center;">
-	 		<div style="display:table;width:100%;color:#fff">
-				<div style="display:table-row">
-					<div style="display:table-cell;width:25%">
-						홈
-					</div>
-					<div style="display:table-cell;width:25%">
-						소개
-					</div>
-					<div style="display:table-cell;width:25%">
-						문구
-					</div>
-					<div style="display:table-cell;width:25%">
-						오시는 길
-					</div>
+	
+	<!-- 메뉴 -->
+	<div id="menu" style="display:none;position:fixed;top:20%;width:100%;z-index:10000;color:black">
+		<p class="menuTitle" id="introduce">신 랑 &middot; 신 부 의 &nbsp;&nbsp;말</p>
+		<p class="menuTitle" id="timeline">타 임 라 인</p>
+		<p class="menuTitle" id="text">드 리 는 &nbsp;&nbsp;말</p>
+		<p class="menuTitle" id="map">오 시 는 &nbsp;&nbsp;길</p>
+	</div>
+	
+	<!-- 내용 -->
+	<div id="content" style="max-width:900px;margin:auto">
+		
+		<!-- 대문 -->
+		<div class="card main">
+			<div class="mainImage second"></div>
+			<div class="mainTitle">
+				<h1 class="title">기 성 &middot; 시 온<br>결 혼 합 니 다.</h1>
+				<div class="separator"></div>
+				<p class="subTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">2018년 4월 14일 토요일 오후 2시<br>판교 더블유 스퀘어 8층 채플홀</p>
+			</div>
+			<div class="downArrowArea"></div>
+		</div>
+		
+		<!-- 신랑, 신부의 말 제목 -->
+		<div id="introduceTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:1em;background-color:#fff">
+			신 랑 &middot; 신 부 의 &nbsp;&nbsp;말
+			<div class="separator2"></div>
+		</div>
+		
+		<!-- 신랑, 신부의 말 -->
+		<div class="card introduce">
+			<div class="dividedCard">
+				<div class="groomImage"></div>
+				<div class="groomDescription">
+					<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신 랑 &nbsp;&nbsp;서 기 성</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						시온이를 처음 만난 건 24살 초 겨울이었습니다.<br>
+						서로 말하느라 정신이 없었던 첫 만남 이후,
+						웃는 게 예쁜 시온이의 매력에 반해
+						눈이 참 많이 내리던 크리스마스 이브 전날
+						우리는 연애를 시작했습니다.
+					</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						조금은 우유부단하고 부지런하지 못했던 저와 달리
+						시온이는 뭘 하든지 참 똑 부러지고
+						자기 자신에 대한 욕심이 많았던 친구였습니다.
+					</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						그런 시온이와 만나면서 저는
+						제가 조금씩 변해가고 있는 걸 느꼈습니다.<br>
+						고민하는 시간보다는 행동으로 옮기는 빈도가 높아졌고,
+						뒤로 미루던 일들을 찾아서 하나씩 해결하게 되었습니다.
+					</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						그러다 문뜩 시온이가 없는 미래의 제 모습이 상상이 안되었고,
+						그래서 결혼을 결심하게 되었습니다.<br>
+						앞으로도 서로 함께 의지하고 부족한 부분을 채워가며
+						서로의 꿈을 위해 살아갈 수 있도록 하겠습니다.
+					</p>
 				</div>
 			</div>
-	  </div>
-		<div style="position:absolute;top:0;left:0;width:100%;height:30%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/gisung_origin.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+			<div class="dividedCard">
+				<div class="brideImage"></div>
+				<div class="brideDescription">
+					<p class="introduceTitle" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">신 부 &nbsp;&nbsp;김 시 온</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						유년시절 부터 책 읽는 것을 좋아했으며,
+						감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는
+						고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
+						주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.
+					</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라
+						긍정적인 변화들을 경험하고 있습니다.<br>
+						운동도 즐겨하게 되었고,
+						게임으로도 스트레스를 풀며,
+						단순하게 사는 즐거움을 알게 되었습니다.<br>
+						무엇보다도 가장 큰 변화는 제가 가치있는 사람으로
+						느낄 수 있도록 옆에서 항상 응원해 주는 점입니다.
+					</p>
+					<p class="introduceDecription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+						이제는 평생의 반려자로써 서로를 아끼고,
+						작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다.
+					</p>
+				</div>
+			</div>
 		</div>
-		<div style="position:absolute;top:33%;left:0;">
-			<h2 style="text-align:center">
-				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-					<span style="font-weight:bold">신랑</span> 서기성<br>
-					<span>_</span><br>
-					유년시절 부터 책 읽는 것을 좋아했으며,<br>
-					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
-					고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
-					주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.<br>
-				</p>
-				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-					하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라<br>
-					긍정적인 변화들을 경험하고 있습니다.<br>
-					운동도 즐겨하게 되었고,<br>
-					게임으로도 스트레스를 풀며,<br>
-					단순하게 사는 즐거움을 알게 되었습니다.<br>
-					무엇보다도 가장 큰 변화는 제가 가치있는 사람으로 느낄 수 있도록<br>
-					옆에서 항상 응원해 주는 점입니다.<br>
-				</p>
-				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-					이제는 평생의 반려자로써 서로를 아끼고,<br>
-					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다 : )<br>
-					<span>_</span>
-				</p>
-			</h2>
+		
+		<!-- 타임라인 제목 -->
+		<div id="imageTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:1em;background-color:#fff">
+			타 임 라 인
+			<div class="separator2"></div>
 		</div>
-	</div>
-	<div class="block">
-		<div style="position:absolute;top:0;left:0;width:100%;height:30%;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sion_alone.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+		
+		<!-- 타임라인 -->
+		<div style="text-align:center;margin-bottom:15%">
+			<div class="_imageButton">
+				<img src="https://sion-gisung.github.io/wedding_invitation/images/min/4-min.jpg" class="toogleImage">
+			</div>
+			<a href="#" class="button" onclick="setTimeout(function() {location.href='timeline.html'}, 300);return false;">7년 동안의 이야기 보러가기 ▶</a>
 		</div>
-		<div style="position:absolute;top:33%;left:0;">
-			<h2 style="text-align:center">
-				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-					<span style="font-weight:bold">신부</span> 김시온<br>
-					<span>_</span><br>
-					유년시절 부터 책 읽는 것을 좋아했으며,<br>
-					감수성이 풍부하여 수학적인 사고와는 거리가 멀었던 저는<br>
-					고등학교, 대학교 모두 인문학을 전공하였습니다.<br>
-					주변 사람들 모두 제가 프로그래머가 될 꺼라고는 상상도 못했죠.<br>
-				</p>
-				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-					하지만 기성 오빠를 만난 후 저는 지금 프로그래머가 되어있을 뿐만 아니라<br>
-					긍정적인 변화들을 경험하고 있습니다.<br>
-					운동도 즐겨하게 되었고,<br>
-					게임으로도 스트레스를 풀며,<br>
-					단순하게 사는 즐거움을 알게 되었습니다.<br>
-					무엇보다도 가장 큰 변화는 제가 가치있는 사람으로 느낄 수 있도록<br>
-					옆에서 항상 응원해 주는 점입니다.<br>
-				</p>
-				<p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-					이제는 평생의 반려자로써 서로를 아끼고,<br>
-					작은 거라도 주변 사람들에게 베풀면서 소박하게 같이 살아가고 싶습니다 : )<br>
-					<span>_</span>
-				</p>
-			</h2>
+		
+		<!-- 드리는 말 제목 -->
+		<div id="messageTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:1em;background-color:#fff">
+			드 리 는 &nbsp;&nbsp;말
+			<div class="separator2"></div>
 		</div>
-	</div>
-	<div class="block">
-		<div data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="position:relative;margin:auto;top:0;width:100px;height:100px;background-image:url('https://sion-gisung.github.io/wedding_invitation/images/sakura.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover">
+		
+		<!-- 드리는 말 -->
+		<div class="card message">
+			<div class="flower" data-scroll="toggle(.scaleDownIn, .scaleDownOut)"></div>
+			<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				단발머리를 찰랑거리며 환하게 웃던<br>
+				21살 소녀를 기억합니다.
+			</p>
+			<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				봄꽃을 닮은 기억 속 아름다운 그 미소가<br>
+				그녀의 입가에서 언제나 머무르도록
+			</p>
+			<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				나무와 같은 변함없는 모습으로<br>
+				그녀 곁에서 행복을 주고 싶습니다.
+			</p>
+			<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				하나님이 기뻐하시는 삶을 위해<br>
+				저희가 부부로서 첫 발걸음을 내딛는 자리에<br>
+				함께해 주셔서 축복해주시길 소망합니다.
+			</p>
+			<!--<div class="separator"></div>-->
+			<p class="contents" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">&middot;</p>
+			<p class="contents" style="margin-bottom:0" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				4월의 신랑 &middot; 신부
+			</p>
+			<p class="contents" style="margin-top:10px" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				기성 &middot; 시온 드림
+			</p>
 		</div>
-		<div>
-			<h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" style="text-align:center">
-				단발머리를 찰랑거리며<br>
-				환하게 웃던<br>
-				21살 소녀를 기억합니다.<br><br>
-				봄꽃을 닮은<br>
-				기억 속 아름다운 미소를 간직할 수 있도록<br>
-				그녀 곁에서 행복을 주고 싶습니다.<br><br>
-				부부로서 첫 걸음을 내딛는 자리에<br>
-				함께해주셔서 축복해 주시길 바랍니다.<br>
-			</h2>
-
-			<h1 style="text-align:center">_</h1>
-
-			<h2 data-scroll="toggle(.scaleDownIn, .scaleDownOut)" style="text-align:center">
-				4월의 신랑 &middot; 신부<br>
-			</h2>
+		
+		<!-- 오시는 길 제목 -->
+		<div id="howToComeTitleArea" style="height:80px;text-align:center;line-height:50px;color:#605a59;font-size:1em;background-color:#fff;">
+			오 시 는 &nbsp;&nbsp;길
+			<div class="separator2"></div>
+		</div>
+		
+		<!-- 오시는 길 -->
+		<div class="card howToCome">
+			<div style="color:#fff;background-color:rgba(96,90,89, 0.8);padding:7px;width:80%;margin:auto;text-align:center;margin-bottom:5px;font-size:0.8em">
+				판교 더블유 스퀘어 / 8F 채플
+			</div>
+			<img src="https://sion-gisung.github.io/wedding_invitation/images/location.png" style="width:90%;height:auto;margin:5%">
+			<div style="text-align:center;padding-bottom:20px">
+				<a href="#" class="button" style="margin-top:0" onclick="setTimeout(function() {location.href='https://m.map.naver.com/map.nhn?pinId=36301790&pinType=site&lat=37.4005315&lng=127.111501&dlevel=11&mapMode=0'}, 300);return false;">네이버 지도로 보기 ▶</a>
+			</div>
+			<p class="howToComeTitle">
+				자가용 (경부고속도로)
+			</p>
+			<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				&middot; 판교 IC 차출 후 좌회언 약 700m 직진하여 사거리에서<br>
+				&nbsp; 우회전 (SK주유소 뒤)
+			</p>
 			
-			<span" style="text-align:center">서일섭 &middot; 김명숙 의 장남</span>
-			<span" style="text-align:center">기성</span><a href="tel:01051327128">tel</a>
+			<p class="howToComeTitle">
+				자가용 (분당수서고속도로)
+			</p>
+			<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				&middot; 청담대교 -> 분당수서로 성담아트센터 옆길<br>
+				&nbsp; (삼평동방향 우회전)
+			</p>
 			
-		</div>
-	</div>
-	<div class="block" style="margin-bottom:200px">
-		<div style="position:absolute;top:0;left:0;width:100%;height:auto;text-align:center">
-			<a data-scroll="toggle(.scaleDownIn, .scaleDownOut)" href="https://map.naver.com/?mapmode=0&lng=4958b2769ef5442aa9ba4ebd1f365754&pinId=36301790&pinType=site&lat=89f63b13c4af0b1ddb76c5eaa1dfffde&dlevel=11&enc=b64">네이버 지도로 보기</a>
-		</div>
-		<div style="position:absolute;top:5%;left:0;width:100%;height:auto;text-align:center">
-				<span style="background-color:#2F343B;padding:7px;color:#fff">판교 더블유 스퀘어 / 8F 채플</span>
-		</div>
-		<div style="position:absolute;top:7%;left:0;width:100%;height:50%;">
-			<img src="https://sion-gisung.github.io/wedding_invitation/images/location.png" style="width:80%;height:auto;margin:10%">
-			<div style="display:table;width:80%;padding-left:5%;padding-right:5%">
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-							<span style="color:#a3546c;font-weight:bold">지하철</span>
-					</div>
-					<div style="display:table-cell;width:63%">
-							<span style="font-weight:bold">[신분당선 판교역] 1번 출구</span> 도보 10분 소요
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							<span style="font-weight:bold">※ 1번 출구 앞 셔틀버스 10분 간격 운행</span>
-					</div>
-				</div>
-
-				<br>
-
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-							<span style="color:#a3546c;font-weight:bold">자가용</span>
-					</div>
-					<div style="display:table-cell;width:63%">
-							<span style="font-weight:bold">[경부고속도로]</span>
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							판교 IC 차출 후 좌회언 약 700m 직진 후<br>
-							사거리에서 우회전 (SK주유소 뒤)
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							<span style="font-weight:bold">[분당수서고속도로]</span>
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							청담대교 -> 분당수서로 성담아트센터 옆길<br>
-							(삼평동방향 우회전)
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							<span style="font-weight:bold">※ 주차장 300대 (무료주차 2시간)</span>
-					</div>
-				</div>
-
-				<br>
-
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-							<span style="color:#a3546c;font-weight:bold">전세버스</span>
-					</div>
-					<div style="display:table-cell;width:63%">
-							안중 경기물류고등학교 교문 앞 <span style="font-weight:bold">(11시 20분 출발)</span>
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							-> 평택 종합운동장 입구 <span style="font-weight:bold">(12시 10분 출발)</span>
-					</div>
-				</div>
-				<div style="display:table-row">
-					<div style="display:table-cell;width:15%">
-					</div>
-					<div style="display:table-cell;width:63%">
-							<span style="font-weight:bold">※ 전세버스 타실 분들은 신부측에 연락 부탁드립니다.</span>
-					</div>
-				</div>
-			</div>
-			<div style="text-align:center;height:100px;line-height:100px;">
-				<span style="padding-top:50px;">Copyright ⓒsion,gisung. All Rights Reserved</span>
-			</div>
+			<p class="howToComeTitle">
+				지하철
+			</p>
+			<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				&middot; [신분당선 판교역] 1번 출구 도보 10분 소요<br>
+				&middot; 1번 출구 앞 셔틀버스 10분 간격 운행
+			</p>
+			
+			<p class="howToComeTitle">
+				전세버스
+			</p>
+			<p class="howToComeDescription" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+				&middot; 안중 경기물류고등학교 교문 앞 (11시 20분 출발)<br>
+				&middot; 평택 종합운동장 입구(12시 10분 출발)<br>
+				&nbsp; 전세버스를 타실 분들은 신부 측에 연락 부탁드립니다.
+			</p>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="ScrollTrigger.min.js"></script>
 	<script src="jquery-sakura.min.js"></script>
+	<script src="Vague.js"></script>
 	<script>
 	$(window).on('load', function() {
-		$('body').sakura();
-		var $mainImage1 = $('#mainImage1');
-		var $mainImage2 = $('#mainImage2');
-		var $mainImage3 = $('#mainImage3');
-		var $boundaryForNavigation = $('#boundaryForNavigation');
-		var $navigation = $('#navigation');
+		var $elContent = $('#content');
+		var $elMenu = $('#menu');
+		var $elIntroduce = $('#introduce');
+		var $elTimeline = $('#timeline');
+		var $elText = $('#text');
+		var $elMap = $('#map');
+		var $elNavigation = $('div.navTrigger');
+		var $imageTimeline = $('._imageButton');
 
-		var nFadeInOutTime = 1000;
-		var nKeepTime = 3000;
-		var oTimer = null;
-		function fadeInOut() {
-			if (oTimer) {
-				clearTimeout(oTimer);
-				oTimer = null;
-			}
-
-			$mainImage1.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
-				$mainImage2.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
-					$mainImage3.fadeIn(nFadeInOutTime).delay(nKeepTime).fadeOut(nFadeInOutTime, function() {
-						oTimer = setTimeout(fadeInOut, nFadeInOutTime);
-					});
-				});
+		// 벚꽃 (100초 뒤 멈춤)
+		$elContent.sakura();
+		setTimeout(function() {
+			$elContent.sakura('stop');
+		}, 1000 * 100);
+		
+		// 텍스트 노출 모듈
+		if (typeof ScrollTrigger !== 'undefined') {
+			var oTrigger = new ScrollTrigger({
+				addHeight: true
 			});
 		}
-
-		fadeInOut();
-
-		$(window).on('scroll', (function() {
-			if (window.pageYOffset > $boundaryForNavigation.offset().top) {
-				$navigation.css('position', 'fixed');
+		
+		// blur 모듈
+		var oVague = $elContent.Vague({
+			intensity : 30
+		});
+		
+		// 스크롤 이동 함수
+		function moveScroll(moveInfo) {
+			$('html, body').animate({
+				scrollTop : moveInfo
+			}, 1000);
+		}
+		
+		// 메뉴 노출 함수
+		function showMenu() {
+			$elNavigation.addClass('active');
+			$elMenu.show();
+			oVague.blur();
+		}
+		
+		// 메뉴 숨김 함수
+		function hideMenu() {
+			$elNavigation.removeClass('active');
+			$elMenu.hide();
+			oVague.toggleblur();
+		}
+		
+		$elIntroduce.on('click', function() {
+			moveScroll($('#introduceTitleArea').offset().top);
+			hideMenu();
+		});
+		
+		$elTimeline.on('click', function() {
+			moveScroll($('#imageTitleArea').offset().top);
+			hideMenu();
+		});
+		
+		$elText.on('click', function() {
+			moveScroll($('#messageTitleArea').offset().top);
+			hideMenu();
+		});
+		
+		$elMap.on('click', function() {
+			moveScroll($('#howToComeTitleArea').offset().top);
+			hideMenu();
+		});
+		
+		$elNavigation.click(function(){
+			if ($elNavigation.hasClass('active')) {
+				hideMenu();
 			} else {
-				$navigation.css('position', 'absolute');
+				showMenu()
 			}
-		}).bind(this));
-	});
+		});
 
-	window.counter = function() {
-		// this refers to the html element with the data-scroll-showCallback tag
-		var span = this.querySelector('span');
-		var current = parseInt(span.textContent);
-
-		span.textContent = current + 1;
-	};
-
-	document.addEventListener('DOMContentLoaded', function(){
-	  var trigger = new ScrollTrigger({
-		  addHeight: true
-	  });
+		//타임라인 page이동
+		$imageTimeline.click(function () {
+			location.href = "timeline.html";
+		});
 	});
 	</script>
-
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,700" rel="stylesheet">
 </body>
 </html>
